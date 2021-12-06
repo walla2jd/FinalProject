@@ -1,0 +1,35 @@
+body {
+    background-color: #0b0a21;
+    font-family: 'Century Gothic'
+}
+
+a {
+    color: #03d6b6;
+}
+
+h1, h2 {
+    color: ghostwhite;
+    text-align: center;
+}
+
+table {
+    background-color: #0b0a21;
+    border: 1px solid white;
+    color: ghostwhite
+}
+
+p {
+    font-size: 14px;
+}
+
+.border-top {
+    border-top: 1px solid #adadad;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #adadad;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}

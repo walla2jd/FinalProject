@@ -1,0 +1,33 @@
+﻿@model List<Game>
+@{
+    ViewBag.Title = "Final Project Home";
+}
+
+<h1>Web Server Application Development II Final Project Home</h1>
+<hr>
+<h2>Popular Games and their Genres:</h2>
+
+<table class="table">
+    <thead>
+        <tr><th>Name</th><th>Year</th><th>Genre</th><th>Description</th><th></th></tr>
+    </thead>
+    <tbody>
+        @foreach (Game vg in Model) {
+
+            <tr>
+                <td>@vg.Name</td>
+                <td>@vg.Year</td>
+                <td>@vg.Genre.Name</td>
+                <td>@vg.Description</td>
+                <td>
+                    <a asp-action="Individual" asp-controller="Game" asp-route-id="@vg.GameId" class="btn btn-outline-dark">View</a>
+                    <a asp-action="Edit" asp-controller="Game" asp-route-id="@vg.GameId" class="btn btn-outline-dark">Edit</a>
+                    <a asp-action="Delete" asp-controller="Game" asp-route-id="@vg.GameId" class="btn btn-outline-dark">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="align-self-center">
+    <a class="btn btn-outline-primary" asp-area="" asp-controller="Game" asp-action="Add">Add a game</a>
+</div>
